@@ -30,12 +30,12 @@ export default function App() {
                   viewport={{ once: true }}
                 >
                   <h2 className="text-5xl font-display font-bold mb-8">
-                    The Evolution: <br />
+                    技术演进：<br />
                     <span className="gradient-text">Graph RAG</span>
                   </h2>
                   <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                    Traditional RAG systems often struggle with relationship loss and context fragmentation. 
-                    By integrating Knowledge Graphs, we can explicitly model entities and their complex interconnections.
+                    传统 RAG 系统在处理复杂关系和长程上下文时往往力不从心。
+                    通过集成知识图谱，我们可以显式地建模实体及其复杂的互联关系，从而实现更深层次的语义理解。
                   </p>
                   
                   <div className="space-y-8">
@@ -44,9 +44,9 @@ export default function App() {
                         <Zap className="text-brand-primary w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold mb-2">Multi-hop Reasoning</h4>
+                        <h4 className="text-xl font-bold mb-2">多跳推理能力</h4>
                         <p className="text-slate-500 text-sm">
-                          Navigate through complex relationship paths to answer questions that require connecting multiple pieces of information across documents.
+                          沿着复杂的语义路径进行导航，回答需要跨文档、跨章节整合多个知识点的问题。
                         </p>
                       </div>
                     </div>
@@ -56,9 +56,9 @@ export default function App() {
                         <Shield className="text-brand-primary w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold mb-2">Reduced Hallucination</h4>
+                        <h4 className="text-xl font-bold mb-2">显著降低幻觉</h4>
                         <p className="text-slate-500 text-sm">
-                          Structured knowledge provides a "ground truth" anchor, significantly improving factual consistency and explainability.
+                          结构化知识提供了坚实的“事实锚点”，大幅提升回答的事实一致性和可解释性。
                         </p>
                       </div>
                     </div>
@@ -79,7 +79,7 @@ export default function App() {
             <div className="bg-white rounded-[3rem] p-8 md:p-12 border border-slate-200 shadow-sm">
               <div className="flex items-center gap-3 mb-8">
                 <Info className="text-brand-primary w-6 h-6" />
-                <h3 className="text-2xl font-display font-bold">Framework Comparison</h3>
+                <h3 className="text-2xl font-display font-bold">主流框架对比</h3>
               </div>
               <ComparisonTable />
             </div>
@@ -95,9 +95,9 @@ export default function App() {
           <div className="max-w-5xl mx-auto px-4 text-center">
             <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
               <div className="relative z-10">
-                <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">Ready to Build <br />Intelligent Systems?</h2>
+                <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">准备好构建<br />智能系统了吗？</h2>
                 <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-                  Join thousands of developers learning the cutting edge of RAG technology with Datawhale's open-source curriculum.
+                  加入数千名开发者的行列，通过 Datawhale 的开源课程掌握 RAG 技术的最前沿。
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a 
@@ -106,7 +106,7 @@ export default function App() {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto bg-brand-primary text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-2 hover:scale-105 transition-transform"
                   >
-                    Read the Full Guide
+                    阅读完整指南
                     <ExternalLink className="w-5 h-5" />
                   </a>
                   <a 
@@ -115,7 +115,7 @@ export default function App() {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white px-10 py-5 rounded-2xl font-bold transition-colors"
                   >
-                    Star on GitHub
+                    在 GitHub 上点赞
                   </a>
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default function App() {
           </div>
           
           <p className="text-slate-400 text-sm">
-            © 2026 Datawhale. Open source under Apache-2.0 License.
+            © 2026 Datawhale. 基于 Apache-2.0 协议开源。
           </p>
           
           <div className="flex items-center gap-6">

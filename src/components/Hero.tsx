@@ -14,7 +14,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-xs font-bold uppercase tracking-wider mb-8"
           >
             <Sparkles className="w-3 h-3" />
-            The Ultimate RAG Guide
+            RAG 技术全栈指南
           </motion.div>
           
           <motion.h1
@@ -23,8 +23,8 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-6xl md:text-8xl font-display font-bold leading-[0.9] tracking-tight mb-8"
           >
-            Mastering <span className="gradient-text">RAG</span> from <br />
-            Zero to Hero
+            从零掌握 <span className="gradient-text">RAG</span> <br />
+            实战大模型应用
           </motion.h1>
           
           <motion.p
@@ -33,8 +33,8 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            A comprehensive full-stack guide for LLM application developers. 
-            Build, optimize, and scale your Retrieval-Augmented Generation systems with precision.
+            面向大模型应用开发者的全栈教程。
+            从理论到实践，构建、优化并扩展您的检索增强生成系统。
           </motion.p>
           
           <motion.div
@@ -44,11 +44,11 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button className="w-full sm:w-auto bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:scale-105 transition-transform group">
-              Start Learning Now
+              立即开始学习
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="w-full sm:w-auto bg-white border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-colors">
-              View Documentation
+              查看文档
             </button>
           </motion.div>
         </div>

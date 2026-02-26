@@ -13,32 +13,32 @@ interface Node extends d3.SimulationNodeDatum {
 }
 
 const mainNodes: Node[] = [
-  { id: 'query', group: 1, label: 'User Query', description: 'The natural language input from the user that initiates the retrieval process.' },
-  { id: 'retriever', group: 2, label: 'Retriever', description: 'The engine that coordinates searching across both vector and graph databases.' },
-  { id: 'vector_db', group: 3, label: 'Vector DB', description: 'Stores high-dimensional embeddings of text chunks for semantic similarity search.' },
-  { id: 'kg', group: 3, label: 'Knowledge Graph', description: 'A network of entities and relationships (triplets) providing structured context.' },
-  { id: 'extraction', group: 4, label: 'Entity Extraction', description: 'The process of using LLMs to identify nodes and edges from raw unstructured text.' },
-  { id: 'community', group: 4, label: 'Community Summary', description: 'Hierarchical summaries of node clusters, enabling global-scale reasoning (Microsoft GraphRAG).' },
-  { id: 'llm', group: 5, label: 'LLM', description: 'The Large Language Model that performs reasoning and generates the final response.' },
+  { id: 'query', group: 1, label: '用户查询', description: '用户输入的自然语言，是整个检索过程的起点。' },
+  { id: 'retriever', group: 2, label: '检索器', description: '协调向量数据库和图数据库搜索的核心引擎。' },
+  { id: 'vector_db', group: 3, label: '向量数据库', description: '存储文本块的高维向量嵌入，用于语义相似度搜索。' },
+  { id: 'kg', group: 3, label: '知识图谱', description: '由实体和关系（三元组）组成的网络，提供结构化的上下文。' },
+  { id: 'extraction', group: 4, label: '实体抽取', description: '利用大模型从原始非结构化文本中识别节点和边的过程。' },
+  { id: 'community', group: 4, label: '社区摘要', description: '对节点簇进行层级化总结，支持全局范围的推理（如 Microsoft GraphRAG）。' },
+  { id: 'llm', group: 5, label: '大语言模型', description: '执行推理并根据检索到的上下文生成最终回答的模型。' },
 ];
 
 const subNodesMap: Record<string, Node[]> = {
   kg: [
-    { id: 'kg_entities', group: 3, label: 'Entities', description: 'Real-world objects or concepts represented as nodes in the graph.', isSubNode: true, parentId: 'kg' },
-    { id: 'kg_rels', group: 3, label: 'Relationships', description: 'The semantic connections between entities, represented as edges.', isSubNode: true, parentId: 'kg' },
-    { id: 'kg_triplets', group: 3, label: 'Triplets', description: 'The core data unit: (Subject, Predicate, Object).', isSubNode: true, parentId: 'kg' },
+    { id: 'kg_entities', group: 3, label: '实体', description: '图谱中代表现实世界对象或概念的节点。', isSubNode: true, parentId: 'kg' },
+    { id: 'kg_rels', group: 3, label: '关系', description: '实体之间的语义连接，表现为图中的边。', isSubNode: true, parentId: 'kg' },
+    { id: 'kg_triplets', group: 3, label: '三元组', description: '核心数据单元：(主体, 谓语, 客体)。', isSubNode: true, parentId: 'kg' },
   ],
   vector_db: [
-    { id: 'vdb_embed', group: 3, label: 'Embeddings', description: 'Numerical representations of text captured in high-dimensional space.', isSubNode: true, parentId: 'vector_db' },
-    { id: 'vdb_sim', group: 3, label: 'Similarity', description: 'Mathematical distance (e.g., Cosine) used to find relevant chunks.', isSubNode: true, parentId: 'vector_db' },
+    { id: 'vdb_embed', group: 3, label: '向量嵌入', description: '将文本捕捉为高维空间中的数值表示。', isSubNode: true, parentId: 'vector_db' },
+    { id: 'vdb_sim', group: 3, label: '相似度', description: '用于寻找相关文本块的数学距离（如余弦相似度）。', isSubNode: true, parentId: 'vector_db' },
   ],
   llm: [
-    { id: 'llm_reason', group: 5, label: 'Reasoning', description: 'The model\'s ability to synthesize retrieved facts into a logical answer.', isSubNode: true, parentId: 'llm' },
-    { id: 'llm_gen', group: 5, label: 'Generation', description: 'Producing human-like text based on the provided context.', isSubNode: true, parentId: 'llm' },
+    { id: 'llm_reason', group: 5, label: '推理', description: '模型将检索到的事实综合成逻辑答案的能力。', isSubNode: true, parentId: 'llm' },
+    { id: 'llm_gen', group: 5, label: '生成', description: '基于提供的上下文产生类人文本的过程。', isSubNode: true, parentId: 'llm' },
   ],
   retriever: [
-    { id: 'ret_hybrid', group: 2, label: 'Hybrid Search', description: 'Combining keyword search with semantic vector search.', isSubNode: true, parentId: 'retriever' },
-    { id: 'ret_rank', group: 2, label: 'Re-ranking', description: 'Refining the order of retrieved results for maximum relevance.', isSubNode: true, parentId: 'retriever' },
+    { id: 'ret_hybrid', group: 2, label: '混合搜索', description: '结合关键词搜索和语义向量搜索。', isSubNode: true, parentId: 'retriever' },
+    { id: 'ret_rank', group: 2, label: '重排序', description: '对检索结果进行精细化排序，以确保最大相关性。', isSubNode: true, parentId: 'retriever' },
   ],
 };
 
@@ -215,15 +215,15 @@ export default function GraphVisualization() {
       <div className="absolute top-8 left-8 z-10 pointer-events-none">
         <div className="flex items-center gap-2 mb-2">
           <MousePointer2 className="w-4 h-4 text-brand-primary" />
-          <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Interactive Core Concepts</h4>
+          <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">核心概念交互演示</h4>
         </div>
-        <p className="text-sm text-slate-500 max-w-[200px]">Click nodes with green rings to expand sub-concepts.</p>
+        <p className="text-sm text-slate-500 max-w-[200px]">点击带有绿色光圈的节点以展开子概念。</p>
       </div>
 
       <div className="absolute top-8 right-8 z-10 flex flex-col gap-2">
         <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">
           <div className="w-3 h-3 rounded-full border-2 border-brand-primary bg-white" />
-          Expandable
+          可展开
         </div>
       </div>
 
@@ -246,7 +246,7 @@ export default function GraphVisualization() {
                   <h5 className="font-display font-bold text-lg">{hoveredNode.label}</h5>
                   {hoveredNode.isSubNode && (
                     <span className="px-2 py-0.5 rounded-full bg-white/10 text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                      Sub-concept
+                      子概念
                     </span>
                   )}
                 </div>
@@ -254,7 +254,7 @@ export default function GraphVisualization() {
                 {subNodesMap[hoveredNode.id] && (
                   <div className="mt-3 flex items-center gap-2 text-xs font-bold text-brand-primary">
                     {expandedNodes.has(hoveredNode.id) ? <Minimize2 className="w-3 h-3" /> : <Maximize2 className="w-3 h-3" />}
-                    {expandedNodes.has(hoveredNode.id) ? 'Click to collapse' : 'Click to expand sub-concepts'}
+                    {expandedNodes.has(hoveredNode.id) ? '点击收起' : '点击展开子概念'}
                   </div>
                 )}
               </div>

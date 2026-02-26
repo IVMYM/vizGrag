@@ -20,10 +20,10 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Features</a>
-            <a href="#graph-rag" className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Graph RAG</a>
-            <a href="#use-cases" className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Use Cases</a>
-            <a href="#architecture" className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Architecture</a>
+            <a href="#features" className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">核心功能</a>
+            <a href="#graph-rag" className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">图 RAG</a>
+            <a href="#use-cases" className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">应用场景</a>
+            <a href="#architecture" className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">系统架构</a>
             <div className="h-4 w-px bg-slate-200 dark:bg-white/10" />
             <a 
               href="https://github.com/datawhalechina/all-in-rag" 
@@ -35,7 +35,7 @@ export default function Navbar() {
               GitHub
             </a>
             <button className="bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-brand-primary/20 transition-all">
-              Get Started
+              立即开始
             </button>
           </div>
 
@@ -55,12 +55,12 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-white border-b border-slate-200 p-4 space-y-4"
         >
-          <a href="#features" className="block text-sm font-medium py-2">Features</a>
-          <a href="#graph-rag" className="block text-sm font-medium py-2">Graph RAG</a>
-          <a href="#use-cases" className="block text-sm font-medium py-2">Use Cases</a>
-          <a href="#architecture" className="block text-sm font-medium py-2">Architecture</a>
+          <a href="#features" className="block text-sm font-medium py-2">核心功能</a>
+          <a href="#graph-rag" className="block text-sm font-medium py-2">图 RAG</a>
+          <a href="#use-cases" className="block text-sm font-medium py-2">应用场景</a>
+          <a href="#architecture" className="block text-sm font-medium py-2">系统架构</a>
           <button className="w-full bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-            Get Started
+            立即开始
           </button>
         </motion.div>
       )}

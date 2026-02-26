@@ -1,5 +1,5 @@
 {
-  "name": "All-in-RAG Showcase",
-  "description": "A comprehensive product sharing website for RAG technology, with a deep dive into Graph RAG concepts and visualizations.",
+  "name": "All-in-RAG 技术全栈指南",
+  "description": "面向大模型应用开发者的 RAG（检索增强生成）技术全栈教程，深入解析 Graph RAG 核心原理与可视化实战。",
   "requestFramePermissions": []
 }

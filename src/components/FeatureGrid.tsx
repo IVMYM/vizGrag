@@ -4,26 +4,26 @@ import { Search, Database, Cpu, MessageSquare, Link2, Share2 } from 'lucide-reac
 
 const features = [
   {
-    title: 'Data Preparation',
-    desc: 'Advanced text chunking and multi-modal embedding strategies for high-quality indexing.',
+    title: '数据准备',
+    desc: '先进的文本分块和多模态嵌入策略，确保高质量的索引构建。',
     icon: Database,
     color: 'bg-blue-500',
   },
   {
-    title: 'Hybrid Retrieval',
-    desc: 'Combining vector similarity with keyword search and structured query generation.',
+    title: '混合检索',
+    desc: '结合向量相似度、关键词搜索和结构化查询生成的强大检索能力。',
     icon: Search,
     color: 'bg-emerald-500',
   },
   {
-    title: 'Graph RAG',
-    desc: 'Leveraging knowledge graphs to capture complex relationships and enable multi-hop reasoning.',
+    title: '图 RAG',
+    desc: '利用知识图谱捕捉复杂关系，实现多跳推理和深层语义关联。',
     icon: Share2,
     color: 'bg-purple-500',
   },
   {
-    title: 'System Evaluation',
-    desc: 'Comprehensive metrics and tools to assess RAG performance, accuracy, and hallucination.',
+    title: '系统评估',
+    desc: '全面的评估指标和工具，用于测试 RAG 系统的准确性、性能和幻觉。',
     icon: Cpu,
     color: 'bg-orange-500',
   },
@@ -34,9 +34,9 @@ export default function FeatureGrid() {
     <div id="features" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <h2 className="text-4xl font-display font-bold mb-4">Core Capabilities</h2>
+          <h2 className="text-4xl font-display font-bold mb-4">核心能力</h2>
           <p className="text-slate-600 max-w-2xl">
-            Our framework covers the entire RAG lifecycle, from raw data to production-ready intelligent systems.
+            我们的框架涵盖了 RAG 的整个生命周期，从原始数据处理到生产级智能系统。
           </p>
         </div>
         
